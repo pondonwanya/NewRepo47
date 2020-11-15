@@ -8,7 +8,7 @@ void inputpassword(void);
 
 void outputpassword(void);
 
-struct pass
+struct password
 {
 	char password[6];
 	int check;
