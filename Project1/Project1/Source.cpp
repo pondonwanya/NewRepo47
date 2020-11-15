@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <conio.h> 
 #include <dos.h>  
 #include <stdio.h> 
@@ -9,7 +10,7 @@ void outputpassword(void);
 
 struct pass
 {
-	char password[9];
+	char password[6];
 	int check;
 }gotoo;
 
@@ -28,9 +29,9 @@ int main()
 
 void inputpassword()
 {
-	printf("Enter Password: ");
+	printf("Enter Password : ");
 
-	for (gotoo.check = 0; gotoo.check < 8; gotoo.check++) {
+	for (gotoo.check = 0; gotoo.check < 6; gotoo.check++) {
 
 
 		gotoo.password[gotoo.check] = _getch();
@@ -44,7 +45,7 @@ void inputpassword()
 
 void outputpassword()
 {
-	printf("Show password: ");
+	printf("Show password : ");
 	if (gotoo.password[gotoo.check] != '\0' || gotoo.password[gotoo.check] != 'x') {
 		for (gotoo.check = 0; gotoo.password[gotoo.check] != '\0'; gotoo.check++)
 			printf("%c", gotoo.password[gotoo.check]);
